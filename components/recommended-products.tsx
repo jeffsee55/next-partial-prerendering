@@ -15,6 +15,7 @@ export async function RecommendedProducts() {
       cache: 'no-store',
     },
   ).then((res) => res.json());
+  await new Promise((resolve) => setTimeout(resolve, 1000));
 
   return (
     <div className="space-y-6" data-headers={headers()}>
